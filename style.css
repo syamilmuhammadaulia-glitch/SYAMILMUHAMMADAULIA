@@ -1,0 +1,307 @@
+
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  /* Gradasi dari Ungu Medium ke Ungu Sangat Tua */
+  background-image: linear-gradient(to bottom, #004d99, #001f4d); 
+  color: #fff;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* HEADER */
+.header {
+    text-align: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 40px 20px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+    border: 5px solid white;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.nama {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+/* SECTION UMUM */
+section {
+    background: white;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #4a5568;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    border-left: 5px solid #667eea;
+    padding-left: 15px;
+}
+
+/* BIODATA */
+.info-grid {
+    display: grid; /* Tetap pertahankan grid untuk container utama, ini baik */
+    gap: 15px;
+}
+
+.info-item {
+    display: flex; /* Pertahankan Flexbox untuk baris */
+    /* HAPUS: justify-content: space-between; */ 
+    padding: 10px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.label {
+    /* PENAMBAHAN KUNCI: Beri lebar tetap yang cukup untuk label terpanjang (misalnya, 150px) */
+    width: 150px; 
+    /* Pastikan lebar tidak menyusut saat ada ruang yang sempit */
+    flex-shrink: 0; 
+    font-weight: bold;
+    color: #4a5568;
+}
+
+.value {
+    /* Biarkan nilai mengisi sisa ruang */
+    flex-grow: 1; 
+    /* Beri sedikit jarak dari label */
+    padding-left: 20px; 
+    color: #718096;
+}
+
+/* RIWAYAT PENDIDIKAN */
+/* Styling untuk seluruh Bagian Riwayat Pendidikan */
+.riwayat-pendidikan {
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* Styling untuk Judul (H2) dengan Garis Biru Vertikal */
+.riwayat-pendidikan h2 {
+    display: flex; /* Untuk menyejajarkan elemen */
+    align-items: center; 
+    font-size: 24px;
+    color: #36454F; /* Warna abu-abu gelap */
+    margin-bottom: 20px;
+}
+
+/* Styling untuk Daftar Berurut (OL) */
+.pendidikan-list {
+    list-style-position: inside; /* Membuat angka penomoran sejajar dengan teks */
+    padding-left: 0;
+    margin-left: 0;
+}
+
+/* Styling untuk Setiap Item Daftar (LI) */
+.pendidikan-list li {
+    font-size: 16px;
+    color: #333333; /* Warna teks gelap agar terlihat jelas */
+    padding: 8px 0;
+    margin-left: 20px; /* Memberi sedikit indentasi agar penomoran terlihat */
+}
+
+/* RIWAYAT PRESTASI NON AKADEMIK */
+/* Styling untuk Daftar Prestasi (UL) */
+.prestasi-list {
+    list-style: none; /* Menghilangkan bullet points */
+    padding: 0;
+    margin: 0 0 20px 0; /* Memberi jarak di bawah daftar */
+}
+
+/* Styling untuk Setiap Item Prestasi (LI) */
+.prestasi-list li {
+    padding: 10px 0;
+    /* Garis pemisah tipis di bawah setiap item */
+    border-bottom: 1px solid #e0e0e0; 
+    color: #333; /* Warna teks gelap agar terlihat jelas */
+}
+
+/* Menghilangkan garis pemisah pada item terakhir */
+.prestasi-list li:last-child {
+    border-bottom: none;
+}
+
+/* Styling untuk Nama Prestasi (Juara 1, Finalist, dll.) */
+.prestasi-nama {
+    font-weight: bold;
+    display: block; /* Memaksa nama prestasi berada di barisnya sendiri */
+    margin-bottom: 2px;
+}
+
+/* Styling untuk Detail/Penyelenggara */
+.prestasi-detail {
+    font-style: italic;
+    color: #666; /* Warna abu-abu yang lembut */
+    font-size: 0.9em; /* Ukuran sedikit lebih kecil */
+    display: block; /* Memaksa detail berada di baris baru di bawah nama */
+}
+
+/* PENGALAMAN ORGANISASI */
+/* Styling untuk seluruh Bagian Riwayat Organisasi */
+.riwayat-organisasi {
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* Styling Judul (H2) - Gunakan styling garis biru yang sama seperti di bagian pendidikan */
+.riwayat-organisasi h2 {
+    /* Pastikan Anda menyalin styling h2 dari Riwayat Pendidikan di sini juga! */
+    font-size: 24px;
+    color: #36454F;
+    margin-bottom: 20px;
+}
+
+/* Styling untuk Daftar Organisasi (UL) */
+.organisasi-list {
+    list-style: none; /* Menghilangkan bullet points */
+    padding: 0;
+    margin: 0; 
+}
+
+/* Styling untuk Setiap Item Organisasi (LI) */
+.organisasi-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0; /* Garis pemisah */
+    color: #333;
+    font-size: 16px; 
+    display: flex; /* Menggunakan Flexbox untuk penyejajaran horizontal */
+    flex-wrap: wrap; /* Penting untuk mengizinkan wrap jika layarnya kecil */
+}
+
+/* 1. Menentukan Jabatan (Paling Menonjol) */
+.organisasi-list .jabatan {
+    font-weight: bold;
+    color: #007bff; /* Memberi warna yang menonjol, seperti biru */
+    flex: 0 0 40%; /* Mengambil 40% lebar (Atur sesuai selera) */
+}
+
+/* 2. Menentukan Nama Organisasi */
+.organisasi-list .organisasi-nama {
+    flex: 1 1 40%; /* Mengambil sisa lebar yang diperlukan */
+    padding-right: 15px; /* Memberi jarak sebelum periode */
+}
+
+/* 3. Menentukan Periode (Paling Kanan) */
+.organisasi-list .periode {
+    flex: 0 0 20%; /* Mengambil 20% lebar (Atur sesuai selera) */
+    text-align: right; /* Meletakkan periode di kanan */
+    font-style: italic;
+    color: #666;
+}
+
+/* Penyesuaian untuk item tanpa properti 'periode' */
+.organisasi-list li:not(:has(.periode)) .organisasi-nama {
+    flex: 1 1 60%;
+    padding-right: 0;
+}
+
+/* SOSIAL MEDIA */
+/* SOSIAL MEDIA */
+.sosmed-desc {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.sosmed-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.sosmed-btn {
+    display: block;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+/* KOREKSI: Koma ekstra telah dihapus di akhir */
+.instagram { background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C); } 
+
+.whatsapp { background: linear-gradient(45deg, #25D366, #128C7E); }
+
+.sosmed-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.note {
+    text-align: center;
+    font-size: 0.9em;
+    color: #888;
+    font-style: italic;
+}
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    margin-top: 30px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .nama {
+        font-size: 2em;
+    }
+    
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    section {
+        padding: 20px;
+    }
+    
+    .info-item {
+        flex-direction: column;
+    }
+    
+    .sosmed-buttons {
+        grid-template-columns: 1fr;
+    }
+} 
